@@ -511,8 +511,6 @@ form {
         flex-wrap: wrap;
         justify-content: center;
     }
-    /* Здесь я так список реализовал, в макете по другому */
-    /* можно ли или надо стремиться к сходству? */
     .how-many__litem {
         width: 25%;
     }
@@ -541,22 +539,17 @@ form {
     .choice__text {
         width: auto;
     }
+    .kind-item__image {
+        min-width: 186px;
+    }    
     .kind-item__link {
-        flex-direction: column;
-        align-items: baseline;
         width: 100%;
-    }
-    .kind-item__wrap {
-        margin: 30px 0 0;
     }
     .projects__text {
         width: auto;
     }
     .how-many__litem {
-        width: 40%;
-    }
-    .how-many__litem:last-of-type{
-        margin-top: 30px;
+        width: 25%;
     }
     .projects {
         padding-bottom:270px;
@@ -569,6 +562,27 @@ form {
     }
     .subscribe__input {
         width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+		padding: 0 15px;
+		width: auto;
+	}
+    .kind-item__link {
+        flex-direction: column;
+        align-items: baseline;
+        width: 100%;
+    }
+    .kind-item__wrap {
+        margin: 30px 0 0;
+    }
+    .how-many__litem {
+        width: 40%;
+    }
+    .how-many__litem:last-of-type{
+        margin-top: 30px;
     }
 }
 
