@@ -1,0 +1,575 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu';
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+}
+
+ul, li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color:#323232;
+    font-size: 36px;
+    line-height: 1.4em;
+}
+
+h3 {
+    line-height: 1.4em;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.4em;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.container {
+    width: 1110px;
+    margin: 0 auto;
+}
+
+svg path {
+    transition: 0.3s;
+}
+
+.header {
+    background: linear-gradient(57.79deg, rgba(8, 8, 18, 0.58) 27.19%, rgba(127, 92, 55, 0.39) 81.02%), url("../img/background.jpg") no-repeat center center / cover;
+    color: #fff;
+}
+
+.nav {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.logo:hover svg path {
+    fill: #da5050;
+}
+
+.menu__list {
+    display: flex;
+}
+
+.menu__link {
+    padding: 33px 24px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    transition: 0.5s;
+    display: block;
+}
+
+.menu__link:hover {
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
+.phone {
+    font-weight: 700;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.phone:hover {
+    color: rgb(255, 145, 145);
+}
+
+.caption {
+    width: 600px;
+    padding: 142px 0 168px;
+}
+.caption__title {
+    font-size: 48px;
+    line-height: 1.2em;
+}
+.caption__text {
+    font-weight: 400;
+    line-height: 1.4em;
+    width: 340px;
+    margin: 18px 0 22px;
+}
+
+.btn {
+    background: #2BD828;
+    width: 200px;
+    font-size: 15px;
+    display: block;
+    padding: 15px 0;
+    border-radius: 50px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #da5050;
+    box-shadow: 0px 0px 55px -14px rgba(0,0,0,0.4);
+}
+
+.arrow-down__image {
+    margin-bottom: 64px;
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+.arrow-down__image:hover {
+    opacity: 1;
+}
+
+.choice {
+    padding: 100px 0;
+}
+
+.choice__text {
+    width: 500px;
+    margin: 18px 0 78px;
+}
+
+.kinds-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 78px;
+}
+
+.kind-item:nth-child(-n+2) {
+    margin-bottom: 50px;
+}
+
+.kind-item__link {
+    color: #000;
+    display: flex;
+    width: 520px;
+    border-radius: 0px 10px 10px 10px;
+    align-items: center
+}
+
+.kind-item__link:hover {
+    box-shadow: 0px 0px 22px 5px rgba(0,0,0,0.15);
+}
+
+.kind-item__image {
+    position: relative;
+    min-height: 144px;
+    min-width: 210px;
+}
+
+.kind-item__image img {
+    border-radius: 0px 10px 10px 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+.kind-item__wrap {
+    margin-left: 30px;
+    line-height: 1.4em;
+}
+
+.kind-item__title {
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.kind-item__text {
+    font-size: 15px;
+    margin: 14px 0;
+}
+
+.kind-item__price {
+    color: #2BD828;;
+}
+
+.projects {
+    background:#F7F6F8;
+    padding: 100px 0 220px;
+    position: relative;
+}
+
+.projects__title {
+    margin-bottom: 18px;
+}
+
+.projects__text {
+    width: 500px;
+}
+
+.projects__list {
+    margin-top: 84px;
+    padding-bottom: 84px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #B8B8B8;
+}
+
+.project__block {
+    position: relative;
+    max-width: 345px;
+    max-height: 265px;
+    display: block;
+
+}
+
+.project__overlay {
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5) url("../img/search.svg") no-repeat center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 22px 5px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+
+.project__overlay:hover {
+    opacity: 1;
+}
+
+.project__img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.how-many__list {
+    margin: 50px 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.how-many__litem {
+    width: 100px;
+    text-align: center;
+}
+
+.how-many__number {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.offer {
+    text-align: center;
+    padding: 52px 88px;
+    background-color:#F4EAFF;
+    border-radius: 15px;
+    position:absolute;
+    left:50%;
+    top:100%;
+    transform:translate(-50%,-50%);
+}
+
+.offer__title {
+    font-size: 19px;
+}
+
+.offer__text {
+    width: 625px;
+    margin: 22px 0 28px;
+}
+
+.offer__btn {
+    margin: 0 auto;
+}
+
+.video {
+    padding: 230px 0 100px;
+    text-align: center;
+}
+
+.video__text {
+    width: 560px;
+    margin: 18px auto 78px;
+}
+
+.video__wrap {
+    width: 830px;
+    margin: 0 auto;
+    padding-bottom: 62px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.video__frame {
+    width: 830px;
+    height: 426px;
+    background: #000000;
+    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+    border-radius: 10px;    
+}
+
+.footer {
+    background: #F7F6F8;
+    padding: 100px 0;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-title {
+    font-size: 19px;
+}
+
+.connection {
+    line-height: 1.6em;
+    width: 200px;
+}
+
+.connection__list {
+    margin: 32px 0;
+}
+
+.connection__item:nth-child(-n+2) {
+    margin-bottom: 16px;
+}
+
+.connection__link {
+    color: #000;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.connection__link:hover svg path {
+    fill: #da5050;
+}
+
+.connection__icon {
+    margin-right: 16px;
+}
+
+.connection__text {
+    font-size: 14px;
+}
+
+.social-network {
+    width: 242px;
+}
+
+.social-network__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 82px;
+}
+
+.social-network__link {
+    color: #2BD828;
+    transition: 0.3s;
+}
+
+.social-network__link:hover {
+    color: #da5050;
+}
+
+.subscribe {
+    margin: auto 0;
+}
+
+form {
+    position: relative;
+    margin: 16px 0 24px;
+}
+
+.subscribe__input {
+    border: 1px solid #F2F2F2;
+    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+    border-radius: 30px;
+    width: 386px;
+    outline: none;
+    padding: 14px 46px 14px 32px;
+    display: block;
+    font-size: 13px;
+}
+
+.subscribe__btn {
+    background: #2BD828;
+    border-radius: 30px;
+    width: 45px;
+    height: 45px;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 0.3s;
+}
+
+.subscribe__btn:hover {
+    background: #da5050;
+}
+
+.subscribe__btn img {
+    padding: 2px 2px 0 0;
+}
+
+.subscribe__text {
+    font-size: 13px;
+}
+
+/*  RESPONSIVE  */
+
+@media (max-width: 1199px) {
+    .container {
+		max-width: 960px;
+	}
+    .kind-item:not(:last-of-type) {
+        margin-bottom: 50px;
+    }
+    .project__item:not(:last-of-type) {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+		max-width: 720px;
+	}
+    .phone {
+        display: none;
+    }
+    .projects__list {
+        flex-wrap: wrap;
+    }
+    .project__item:not(:last-of-type) {
+        margin: 0 0 30px;
+    }
+    .footer__container {
+        flex-wrap: wrap;
+    }
+    .connection:not(:last-of-type) {
+        margin-bottom: 80px;
+    }
+    .offer {
+        padding: 40px 30px;
+    }
+    .video__wrap {
+        width: 100%;
+    }
+    .video__frame {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+		max-width: 540px;
+	}
+    .menu {
+        display: none;
+    }
+    .phone {
+        display: inline;
+    }
+    .nav {
+        padding: 20px 0;
+    }
+    .caption {
+        width: auto;
+    }
+    .caption__title {
+        font-size: 38px;
+    }
+    .choice__text {
+        margin-bottom: 100px;
+    }
+    .projects__list {
+        justify-content: center;
+    }
+    .how-many__list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    /* Здесь я так список реализовал, в макете по другому */
+    /* можно ли или надо стремиться к сходству? */
+    .how-many__litem {
+        width: 25%;
+    }
+    .how-many__litem:nth-child(-n+4) {
+        margin-bottom: 24px;
+    }
+    .offer {
+        width: 90%;
+    }
+    .offer__text {
+        width: auto;
+    }
+    .video__text {
+        width: auto;
+    }
+}
+
+@media (max-width: 575px) {
+    .container {
+		padding: 0 15px;
+		width: auto;
+	}
+    .caption__text {
+        width: auto;
+    }
+    .choice__text {
+        width: auto;
+    }
+    .kind-item__link {
+        flex-direction: column;
+        align-items: baseline;
+        width: 100%;
+    }
+    .kind-item__wrap {
+        margin: 30px 0 0;
+    }
+    .projects__text {
+        width: auto;
+    }
+    .how-many__litem {
+        width: 40%;
+    }
+    .how-many__litem:last-of-type{
+        margin-top: 30px;
+    }
+    .projects {
+        padding-bottom:270px;
+    }
+    .video {
+        padding-top: 270px;
+    }
+    .social-network {
+        margin-bottom: 80px;
+    }
+    .subscribe__input {
+        width: 100%;
+    }
+}
+
+
